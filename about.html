@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Kami — Hammers Wallabe</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/darkmode.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Tentang Kami</span>
+    <h1 style="font-size:clamp(1.9rem,3vw,2.6rem)">Hammers Wallabe</h1>
+    <p class="lead">Toko sepatu online yang fokus pada sneaker suede bergaya city-series — menghadirkan colorway klasik dan edisi terbatas dengan kualitas suede dan jahitan yang selalu dicek langsung sebelum dikirim.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="num">3</div><div class="label">Silhouette kurasi: Terrace, Spezial, Runner</div></div>
+      <div class="stat-card"><div class="num">10+</div><div class="label">Colorway kota siap kirim ke seluruh Indonesia</div></div>
+      <div class="stat-card"><div class="num">4.8</div><div class="label">Rata-rata rating kepuasan pelanggan</div></div>
+    </div>
+
+    <div class="about-block">
+      <h2>Value Proposition</h2>
+      <p>Hammers Wallabe mengkurasi sneaker suede city-series — silhouette Terrace, Spezial, dan Classic Runner — dengan colorway dari kota-kota ikonik seperti Wien, Dublin, Liverpool, Hamburg, Birmingham, Amsterdam, München, Bali, dan London. Setiap pasang diperiksa kualitas suede dan jahitannya sebelum dikirim, sehingga pembeli online tetap mendapat kualitas seperti membeli langsung di toko fisik.</p>
+
+      <h2>Target Market &amp; Segmentasi Pelanggan</h2>
+      <p>Tiga segmen utama kami:</p>
+      <ul style="list-style:disc;padding-left:22px;margin-bottom:1em">
+        <li><strong>Sneakerhead & kolektor</strong> (usia 18–35) yang mengejar colorway langka dan edisi terbatas seperti Birmingham Purple atau London '96.</li>
+        <li><strong>Anak muda urban & pekerja kreatif</strong> (usia 20–40) yang butuh sneaker kasual namun tetap stylish untuk aktivitas harian di kota.</li>
+        <li><strong>Penggemar budaya streetwear & terrace culture</strong> yang mengapresiasi sejarah city-series dan sol gum klasik.</li>
+      </ul>
+
+      <h2>Analisis Pasar Singkat &amp; Kompetitor</h2>
+      <p>Pasar sneaker suede city-series di Indonesia tumbuh seiring meningkatnya minat pada gaya retro dan terrace culture yang dipopulerkan komunitas sneaker lokal. Kompetitor tidak langsung mencakup marketplace umum (Tokopedia, Shopee) yang unggul dari sisi jangkauan namun lemah dalam kurasi colorway dan jaminan keaslian, serta reseller media sosial yang tidak konsisten stoknya. Diferensiasi Hammers Wallabe terletak pada kurasi ketat per silhouette, foto produk asli tanpa retouch berlebihan, dan deskripsi detail tiap colorway.</p>
+
+      <h2>Strategi Manajemen Produk &amp; Katalog</h2>
+      <p>Produk dikelompokkan ke dalam tiga silhouette inti — Terrace Series, Spezial Series, dan Classic Runner (lihat halaman Katalog) — agar navigasi tetap sederhana bagi pembeli baru maupun kolektor berpengalaman. Setiap listing memuat: nama colorway, kota/koleksi asal, deskripsi naratif singkat tentang detail suede dan sol, rating, stok, serta tag pencarian (mis. "sol gum", "edisi terbatas") supaya mudah difilter. Foto produk memakai foto asli setiap pasang agar warna suede terlihat akurat sebelum dibeli.</p>
+
+      <h2>Model Bisnis &amp; Revenue Stream</h2>
+      <p>Model utama adalah <strong>penjualan retail langsung (D2C)</strong>: Hammers Wallabe membeli/konsinyasi stok dari distributor dan menjualnya langsung ke pembeli dengan margin ritel. Revenue tambahan berasal dari: (1) penjualan colorway edisi terbatas dengan harga premium, (2) bundling perawatan sepatu (suede brush & protector spray), dan (3) program pre-order untuk drop colorway baru sebelum stok tersedia luas.</p>
+
+      <h2>Strategi Harga, Promosi, dan Diskon</h2>
+      <p>Harga ditetapkan berdasarkan silhouette dan tingkat kelangkaan colorway — edisi reguler dibanderol lebih terjangkau, sementara edisi terbatas (Birmingham, London '96) dibanderol lebih tinggi karena stok minim. Strategi promosi meliputi kode diskon musiman (contoh yang disimulasikan di keranjang: <code>HAMMERS10</code> untuk 10%, <code>WALLABE20</code> untuk 20% saat kampanye drop baru), gratis ongkir bertahap di atas nilai belanja tertentu, dan bundling perawatan suede gratis untuk pembelian di atas satu pasang.</p>
+
+      <h2>Proses Checkout &amp; Simulasi Payment Gateway</h2>
+      <p>Alur checkout dua langkah: (1) Keranjang — pengguna meninjau item, mengubah kuantitas, dan menerapkan kode promo; (2) Checkout — pengguna mengisi data pengiriman dan memilih metode pembayaran. Pada purwarupa ini, integrasi payment gateway disimulasikan mengikuti pola <strong>Midtrans/Xendit</strong> dengan empat pilihan: <strong>QRIS</strong> (scan sekali, bayar dengan aplikasi bank atau e-wallet apa saja — didukung standar GPN "Satu QRIS untuk Semua"), Virtual Account (BCA/BNI/BRI/Mandiri), E-Wallet (GoPay/OVO/DANA/ShopeePay), dan Kartu Kredit/Debit, lengkap dengan validasi format input. Pada produksi nyata, langkah ini akan digantikan dengan Midtrans/Xendit Snap API yang menghasilkan kode QRIS dan token pembayaran sungguhan beserta notifikasi status via webhook.</p>
+
+      <h2>Rencana SEO, Keamanan, dan Pemeliharaan</h2>
+      <ul style="list-style:disc;padding-left:22px;margin-bottom:1em">
+        <li><strong>SEO:</strong> URL deskriptif per silhouette/colorway, meta description unik, struktur heading semantik, gambar dengan atribut alt nama colorway, serta konten blog seputar sejarah terrace/city-series untuk kata kunci long-tail (mis. "sneaker suede city series original").</li>
+        <li><strong>Keamanan:</strong> HTTPS wajib di seluruh domain, validasi input di sisi klien dan server, sanitasi data sebelum disimpan, serta payment gateway pihak ketiga bersertifikasi PCI-DSS sehingga data kartu maupun QRIS tidak pernah disimpan di server kami.</li>
+        <li><strong>Pemeliharaan:</strong> audit performa halaman & broken link bulanan, backup data mingguan, serta pembaruan dependensi/keamanan berkala.</li>
+      </ul>
+
+      <h2>Rencana Penggunaan Data Analytics</h2>
+      <p>Metrik dari Google Analytics (lihat <code>js/analytics.js</code>) — bounce rate, conversion rate, add-to-cart rate, cart abandonment, rata-rata nilai pesanan, dan kata kunci pencarian internal — ditinjau tiap dua minggu untuk: memprioritaskan silhouette/colorway yang perlu ditambah stok, menyesuaikan copywriting halaman dengan bounce rate tinggi, menargetkan ulang pengguna yang meninggalkan keranjang lewat email/promo, serta mengukur metode pembayaran (termasuk adopsi QRIS) yang paling banyak digunakan pembeli.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/script.js"></script>
+<script src="js/products.js"></script>
+<script src="js/darkmode.js"></script>
+<script>
+  renderHeader("about.html");
+  renderFooter();
+</script>
+</body>
+</html>
