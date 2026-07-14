@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hammers Wallabe — Sneaker City Series Suede Asli</title>
+<meta name="description" content="Belanja sneaker suede city series — Wien, Dublin, Liverpool, Hamburg, Birmingham, Amsterdam, München, London — di Hammers Wallabe.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/darkmode.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">● Suede asli, sol gum ikonik</span>
+      <h1>Sneaker kota, gaya jalanan.</h1>
+      <p class="lead">Koleksi city series suede — dari Wien hingga London — dikurasi untuk kamu yang cari sneaker klasik dengan karakter kuat dan kenyamanan sepanjang hari.</p>
+      <div class="hero-cta">
+        <a href="categories.html" class="btn btn-primary">Jelajahi Katalog</a>
+        <a href="#produk-pilihan" class="btn btn-secondary">Lihat Produk Pilihan</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="images/birmingham.jpg" alt="Birmingham Purple sneaker">
+      <span class="hero-tag">Birmingham Purple · Edisi Terbatas</span>
+    </div>
+  </div>
+</section>
+
+<div class="parang-divider"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Mulai dari sini</span>
+        <h2>Belanja per silhouette</h2>
+      </div>
+      <a href="categories.html" class="link-btn">Lihat semua &rarr;</a>
+    </div>
+    <div class="cat-grid" id="home-cat-grid"></div>
+  </div>
+</section>
+
+<section class="section" id="produk-pilihan" style="background:var(--paper-2)">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Kurasi minggu ini</span>
+        <h2>Produk pilihan</h2>
+      </div>
+    </div>
+    <div class="product-grid" id="featured-grid"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container about-block center" style="max-width:640px;margin:0 auto">
+    <span class="eyebrow">Kenapa Hammers Wallabe</span>
+    <h2>Setiap pasang, suede & jahitan asli</h2>
+    <p class="muted">Kami memilih sendiri setiap colorway dan memastikan kualitas suede serta jahitan sebelum sampai ke tanganmu. Baca lebih lanjut soal misi dan model bisnis kami.</p>
+    <a href="about.html" class="btn btn-secondary">Tentang Kami</a>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/script.js"></script>
+<script src="js/products.js"></script>
+<script src="js/darkmode.js"></script>
+<script>
+  renderHeader("index.html");
+  renderFooter();
+
+  const catGrid = document.getElementById("home-cat-grid");
+  catGrid.innerHTML = CATEGORIES.map(c => `
+    <a class="cat-card" href="categories.html?cat=${c.slug}">
+      <div class="cat-icon" style="background:${CAT_ACCENT[c.slug]}">${c.name[0]}</div>
+      <h3>${c.name}</h3>
+      <p>${c.blurb}</p>
+    </a>`).join("");
+
+  const featured = [...PRODUCTS].sort((a,b) => b.rating - a.rating).slice(0, 8);
+  document.getElementById("featured-grid").innerHTML = featured.map(renderProductCard).join("");
+  bindProductCardEvents();
+</script>
+</body>
+</html>
